@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Form</title>
+</head>
+<body>
+    <div align="center">
+	<form action=" " method="post">
+		<div class="username">
+		    <label for="username">姓名：</label>
+		    <input id="username" type="text" name="username" placeholder="用户名"/>
+		</div>
+		<div class="password">
+		    <label for="password">密码：</label>
+		    <input id="password" type="password" name="password"/>
+		</div>
+		<div class="sex">
+		    <label for="sex">性别：</label>
+			<input id="F" type="radio" name="sex" value="男" checked/>
+			<label for="F">男</label>
+			<input id="M" type="radio" name="sex" value="女"/>
+			<label for="M">女</label>
+		</div>
+        <div class="love">
+		    <label for="love">取向：</label>
+		    <input id="F2" type="radio" name="love" value="男"/>
+		    <label for="F2">男</label>
+		    <input id="M2" type="radio" name="love" value="女" checked/>
+		    <label for="M2">女</label>
+	    </div>
+	    <div class="hobby">
+		    <label for="hobby">爱好：</label>
+		    <label><input type="checkbox" name="hobby" value="data"/>dota</label>
+		    <label><input type="checkbox" name="hobby" value="旅游" checked/>旅游</label>
+		    <label><input type="checkbox" name="hobby" value="宠物" checked/>宠物</label>
+	    </div>
+	    <div class="textarea">
+	        <label for="comment">评论：</label>
+			<textarea name="article" id="" cols="30" rows="10">ddd</textarea>
+		</div>
+	    <div>
+		    <label for="myCar">我的car：</label>
+		    <select>
+			    <option name="myCar" value="萨博">萨博</option>
+			    <option name="myCar" value="比亚迪">比亚迪</option>
+			    <option name="myCar" value="宝马">宝马</option>
+			    <option name="myCar" value="特斯拉">特斯拉</option>
+		    </select>
+		    <input type="submit" name="submit" value="提交"/>
+	    </div>
+	</form>
+	</div>
+</body>
+</html>
