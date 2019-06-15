@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>pseudo</title>
+	<style>
+        .rectangle {
+            height: 60px;
+            width: 120px;
+            border: 1px solid #D2D2D2;
+            margin: 50px;
+            background-color: white;
+            position: relative;
+        }
+
+        .pseudo-element1:before {
+            content: "";
+            /* display: block; */ 
+            width: 0;
+            height: 0;
+            position: absolute;
+            margin-left: 10px;
+            top: -20px;
+            border: 10px solid;
+            border-color: #FFF #FFF #888 #FFF;
+            /*border-bottom: 10px solid  #888888 ;
+            border-left: 10px solid transparent ;
+            border-right: 10px solid transparent ;*/
+        }
+        .pseudo-element2:before {
+            content: "";
+            width: 0;
+            height: 0;
+            position: absolute;
+            margin-left: 104px;
+            top: 0;
+            border: 8px solid;
+            border-color: #F00 #F00 #FFF #FFF;   
+        }
+        .pseudo-element3:before {
+            content: "";
+            /* display: block; */ 
+            width: 10px;
+            height: 10px;
+            border-left: 1px solid #888;
+            border-top: 1px solid #888;
+            background-color: #FFF;
+            transform: rotateZ(45deg);
+            position: absolute;
+            margin-left: 10px;
+            top: -6px;
+        }
+	</style>
+</head>
+<body>
+    <div class="rectangle pseudo-element1">  
+    </div>
+    <div class="rectangle pseudo-element2">  
+    </div>
+    <div class="rectangle pseudo-element3">  
+    </div>
+</body>
+</html>
