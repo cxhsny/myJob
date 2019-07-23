@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>DOM1</title>
+  <style>
+    .them{
+      padding: 20px;
+      border: 1px solid #ccc;
+      box-shadow: 1px 1px 2px 2px rgba(0,0,0,0.3); 
+    }
+
+    .them.active {
+      background: #000;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="them">
+    <h1>hello</h1>
+    <p>jirengu</p>
+  </div>
+  <button class="add">add</button>
+  <button class="remove">remove</button>
+  <button class="toggle1">toggle1</button>
+  <button class="toggle2">toggle2</button>
+</body>
+<script>
+  var addBtn = document.querySelector('.add')
+  var removeBtn = document.querySelector('.remove')
+  var toggle1Btn = document.querySelector('.toggle1')
+  var toggle2Btn = document.querySelector('.toggle2')
+  var themPanel = document.querySelector('.them')
+
+  addBtn.onclick = function(){
+  themPanel.classList.add('active')
+  }
+
+  removeBtn.onclick = function(){
+  themPanel.classList.remove('active')
+  }
+
+  toggle1Btn.onclick = function(){
+    if(themPanel.classList.contains('active')){
+      themPanel.classList.remove('active')
+    }else{
+      themPanel.classList.add('active')
+    }
+  }
+
+  toggle2Btn.onclick = function(){
+    themPanel.classList.toggle('active')
+  }
+</script>
+</html>
