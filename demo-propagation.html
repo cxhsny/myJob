@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Document</title>
+</head>
+<body>
+  <style>
+    .container,
+    .box,
+    .target{
+      border: 1px solid;
+      padding: 10px;
+    }  
+    .container {
+      width: 200px;
+    }
+  </style>
+  <button id="btn">click</button>
+  
+  <div class="container">
+    container
+    <div class="box">
+      box
+      <div class="target">target</div>
+    </div>
+  </div>
+  <script>
+    function $(selector){
+      return document.querySelector(selector)
+    }
+
+    var btn = $('#btn')
+    btn.onclick = function (e){
+      console.log(e) 
+    }
+    btn.addEventListener('click', function(evt){
+      console.log(this)
+      console.log(btn)
+      console.log(evt.target)
+    })
+
+    $('.container').addEventListener('click', function(e){
+      console.log('contianer click.. in 捕获阶段')
+    }, true)
+    $('.box').addEventListener('click', function(e){
+      //e.stopPropagation()
+      console.log('box click.. in 捕获阶段')
+    }, true)
+    $('.target').addEventListener('click', function(e){
+      console.log('target click.. in 捕获阶段')
+    }, true)
+
+    $('.container').addEventListener('click', function(e){
+      console.log('contianer click.. in 冒泡阶段')
+    }, false)
+    $('.box').addEventListener('click', function(e){
+      //e.stopPropagation()
+      console.log('box click.. in 冒泡阶段')
+    }, false)
+    $('.target').addEventListener('click', function(e){
+      console.log('target click.. in 冒泡阶段')
+    }, false)
+  </script>  
+</body>
+</html>
